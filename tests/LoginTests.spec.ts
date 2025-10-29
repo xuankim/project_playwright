@@ -18,5 +18,5 @@ test('Unsucessfull Login Verification', async({page})=>{
     await page.locator('[data-test="username"]').fill("standard_user_wrong");
     await page.locator('[data-test="password"]').fill("secret_sauce");
     await page.locator('[data-test="login-button"]').click();
-    await expect(page.locator('#shopping_cart_container a')).toBeVisible();
+    await expect(page.locator('#shopping_cart_container a')).not.toBeVisible();
 })
